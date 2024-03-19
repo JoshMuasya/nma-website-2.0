@@ -6,6 +6,7 @@
   background-image: url('../public/landing.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
  
 @layer base {

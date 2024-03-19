@@ -35,8 +35,8 @@ const Services = () => {
     ];
 
     return (
-        <div className='w-full mt-20 flex flex-col justify-center items-center align-middle' id='services'>
-            <div className='flex flex-col justify-center align-middle items-center pb-40 w-full'>
+        <div className='w-full mt-16 flex flex-col justify-center items-center align-middle' id='services'>
+            <div className='flex flex-col justify-center align-middle items-center pb-20 w-full'>
                 {/* Title */}
                 <div className='flex flex-row justify-between align-middle items-center w-full px-10 py-5'>
                     <h1 className='text-4xl font-bold'>

@@ -21,7 +21,7 @@ const Contact = () => {
     }
 
     return (
-        <div className='w-full mt-20' id='contact'>
+        <div className='w-full mt-14' id='contact'>
             <div className='flex flex-col lg:flex-row lg:items-start lg:justify-around justify-center align-middle items-center pb-40 w-full px-14'>
                 {/* Logo */}
                 <Link

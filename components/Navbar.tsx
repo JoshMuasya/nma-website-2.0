@@ -33,16 +33,16 @@ const Navbar = () => {
         >
           <Image
             src="/Logo.png"
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             alt="Logo"
           />
 
           <Image
             src="/scale.png"
-            className='pl-3'
-            width={80}
-            height={80}
+            className='pl-4'
+            width={50}
+            height={50}
             alt="Logo"
           />
         </Link>

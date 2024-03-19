@@ -6,13 +6,13 @@ import Link from 'next/link'
 
 const AboutUs = () => {
     return (
-        <div className='w-full mt-56' id='about'>
-            <div className='flex flex-col lg:flex-row justify-around align-middle items-center pb-40'>
+        <div className='w-full mt-20' id='about'>
+            <div className='flex flex-col lg:flex-row justify-around align-middle items-center pb-20'>
                 {/* Left */}
-                <div>
+                <div className='flex flex-row justify-between align-middle items-start w-full p-10'>
                     {/* Text */}
                     <div className='pb-5'>
-                        <h1 className='text-3xl pb-3'>
+                        <h1 className='text-4xl font-bold pb-4'>
                             About Us
                         </h1>
 
