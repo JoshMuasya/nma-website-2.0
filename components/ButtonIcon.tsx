@@ -18,7 +18,7 @@ const ButtonIcon: React.FC<ButtonIconProps> = ({ text, href }) => {
         <div>
             <Link
                 href={href}
-                className={`${buttonVariants({ variant: "default" })} text-lg font-semibold transition-all`}
+                className={`${buttonVariants({ variant: "default" })} text-base md:text-lg font-semibold transition-all`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

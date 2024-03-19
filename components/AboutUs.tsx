@@ -12,7 +12,7 @@ const AboutUs = () => {
                 <div className='flex flex-row justify-between align-middle items-start w-full p-10'>
                     {/* Text */}
                     <div className='pb-5'>
-                        <h1 className='text-4xl font-bold pb-4'>
+                        <h1 className='text-xl md:text-4xl font-bold pb-4'>
                             About Us
                         </h1>
 

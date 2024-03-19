@@ -39,8 +39,8 @@ const Services = () => {
             <div className='flex flex-col justify-center align-middle items-center pb-20 w-full'>
                 {/* Title */}
                 <div className='flex flex-row justify-between align-middle items-center w-full px-10 py-5'>
-                    <h1 className='text-4xl font-bold'>
-                        SERVICES
+                    <h1 className='text-xl md:text-4xl font-bold'>
+                        Services
                     </h1>
 
                     <ButtonIcon
