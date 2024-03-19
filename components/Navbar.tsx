@@ -20,9 +20,8 @@ const Navbar = () => {
     };
   }, []);
 
-  const navbarClasses = `w-screen py-5 fixed transition-all z-20 ${
-    scrollY > 0 ? 'bg-background bg-opacity-60' : 'bg-transparent'
-  }`;
+  const navbarClasses = `w-screen py-5 fixed transition-all z-20 ${scrollY > 0 ? 'bg-background bg-opacity-60' : 'bg-transparent'
+    }`;
 
   return (
     <nav className={navbarClasses}>
@@ -30,9 +29,18 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href=''
+          className='flex flex-row justify-center items-center align-middle'
         >
           <Image
             src="/Logo.png"
+            width={80}
+            height={80}
+            alt="Logo"
+          />
+
+          <Image
+            src="/scale.png"
+            className='pl-3'
             width={80}
             height={80}
             alt="Logo"

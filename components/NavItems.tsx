@@ -52,8 +52,9 @@ export function NavItems() {
         {isMobile ? (
           <Link
           href=''
+          title="Home"
           >
-            <HomeIcon className="h-3 w-3 md:h-6 md:w-6"/>
+            <HomeIcon className="h-3 w-3 hover:h-4 hover:w-4 md:h-6 md:w-6 md:hover:h-7 md:hover:w-7"/>
           </Link>
         ) : (
           <Link
@@ -67,8 +68,9 @@ export function NavItems() {
         {isMobile ? (
           <Link
           href='/#about'
+          title='About'
           >
-            <EnterIcon className="h-3 w-3 md:h-6 md:w-6"/>
+            <EnterIcon className="h-3 w-3 hover:h-4 hover:w-4 md:h-6 md:w-6 md:hover:h-7 md:hover:w-7"/>
           </Link>
         ) : (
           <Link
@@ -82,8 +84,9 @@ export function NavItems() {
         {isMobile ? (
           <Link
           href='/#services'
+          title='Expertise'
           >
-            <Lightbulb className="h-3 w-3 md:h-6 md:w-6"/>
+            <Lightbulb className="h-3 w-3 hover:h-4 hover:w-4 md:h-6 md:w-6 md:hover:h-7 md:hover:w-7"/>
           </Link>
         ): (
           <Link
@@ -97,8 +100,9 @@ export function NavItems() {
         {isMobile ? (
           <Link
           href='/#contact'
+          title='Contact'
           >
-            <Contact2Icon className="h-3 w-3 md:h-6 md:w-6"/>
+            <Contact2Icon className="h-3 w-3 hover:h-4 hover:w-4 md:h-6 md:w-6 md:hover:h-7 md:hover:w-7"/>
           </Link>
         ) : (
           <Link

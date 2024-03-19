@@ -1,9 +1,31 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ButtonIcon from './ButtonIcon'
+import { ArrowUpCircle } from 'lucide-react';
 
 const HomePage = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  };
 
   return (
     <div className='hero-background h-screen w-full'>
@@ -20,12 +42,22 @@ const HomePage = () => {
 
         {/* Button */}
         <div>
-          <ButtonIcon 
-          text='Expertise'
-          href='/expertise'
+          <ButtonIcon
+            text='Expertise'
+            href='/expertise'
           />
         </div>
       </div>
+
+      {/* Floating icon for scrolling to the top */}
+      {isScrolled && (
+        <div
+          className="fixed bottom-14 right-4 bg-primary p-3 rounded-full cursor-pointer"
+          onClick={scrollTop}
+        >
+          <ArrowUpCircle className="" />
+        </div>
+      )}
     </div>
   )
 }

@@ -4,46 +4,25 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-
 import { Button } from "@/components/ui/button"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 
-const formSchema = z.object({
-    name: z.string(),
-    email: z.string(),
-    message: z.string()
-})
-
 const Contact = () => {
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            name: "",
-            email: "",
-            message: ""
-        },
-    })
+    const handleEmail = () => {
+        const recipientEmail = 'muasyajoshua07@gmail.com';
+        const gmailComposeUrl = `mailto:${recipientEmail}`;
+        window.open(gmailComposeUrl, '_blank');
+    }
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
+    const handleWhatsApp =() => {
+        const phoneNumber = '+254798040353';
+        const whatsappUrl = `https://wa.me/${phoneNumber}`;
+        window.open(whatsappUrl, '_blank');
     }
 
     return (
         <div className='w-full mt-20' id='contact'>
-            <div className='flex flex-col lg:flex-row lg:items-start lg:justify-around justify-center align-middle items-center pb-40 w-full'>
+            <div className='flex flex-col lg:flex-row lg:items-start lg:justify-around justify-center align-middle items-center pb-40 w-full px-14'>
                 {/* Logo */}
                 <Link
                     href=''
@@ -57,60 +36,42 @@ const Contact = () => {
                 </Link>
 
                 {/* Get In Touch */}
-                <div className='w-full lg:max-w-md'>
-                    <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                            {/* Name */}
-                            <FormField
-                                control={form.control}
-                                name="name"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Name</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Name" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                <div className='w-full lg:max-w-md py-10 lg:py-0'>
+                    {/* Send Message Links */}
+                    <div className='flex flex-col justify-center align-middle items-center w-full'>
+                        <h1 className='font-bold text-xl pb-5'>
+                            Talk to us:
+                        </h1>
+                        {/* Email */}
+                        <div className='flex flex-col justify-center align-middle items-center font-semibold text-base pb-5'>
+                            <h1 className='pb-2'>
+                                Send us an Email
+                            </h1>
 
-                            {/* Email */}
-                            <FormField
-                                control={form.control}
-                                name="email"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Email</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="name@provider.com" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                            {/* Button */}
+                            <Button 
+                            className='font-semibold hover:font-bold'
+                            onClick={handleEmail}
+                            >
+                                Send Email
+                            </Button>
+                        </div>
 
-                            {/* Message */}
-                            <FormField
-                                control={form.control}
-                                name="message"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Message</FormLabel>
-                                        <FormControl>
-                                            <Textarea
-                                                placeholder="Enter your Message here"
-                                                {...field}
-                                            />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                        {/* WhatsApp */}
+                        <div className='flex flex-col justify-center align-middle items-center font-semibold text-base pb-5'>
+                            <h1 className='pb-2'>
+                                Talk to us Directly
+                            </h1>
 
-                            <Button type="submit">Send Message</Button>
-                        </form>
-                    </Form>
+                            {/* Button */}
+                            <Button 
+                            className='font-semibold hover:font-bold'
+                            onClick={handleWhatsApp}
+                            >
+                                WhatsApp
+                            </Button>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Social Media */}

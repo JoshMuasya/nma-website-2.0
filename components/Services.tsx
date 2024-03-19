@@ -26,9 +26,9 @@ const Services = () => {
         { image: '/Corporate.jpg', text: 'Corporate M&A' },
         { image: '/Dispute.jpg', text: 'Dispute Resolution' },
         { image: '/Trade.jpg', text: 'International Trade' },
-        { image: '/Intellectual.jpg', text: 'Intellectual Property' },
-        { image: '/Private.jpg', text: 'Private Client' },
-        { image: '/Project.jpg', text: 'Project Infrastructure' },
+        { image: '/social.png', text: 'Intellectual Property' },
+        { image: '/Intellectual.jpg', text: 'Private Client' },
+        { image: '/road2.png', text: 'Projects & Infrastructure' },
         { image: '/Estate.jpg', text: 'Real Estate' },
         { image: '/Tax.jpg', text: 'Tax' },
         { image: '/Employment.jpg', text: 'Employement' }
@@ -75,7 +75,7 @@ const Services = () => {
                                                     />
 
                                                     {/* Overlay */}
-                                                    <div className='bg-foreground absolute z-0 h-full w-full opacity-40 rounded-2xl' />
+                                                    <div className='bg-foreground hover:bg-primary hover:opacity-65 absolute z-0 h-full w-full opacity-40 rounded-2xl' />
 
                                                     <Link
                                                         href=''
